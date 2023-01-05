@@ -1,13 +1,13 @@
 # Site settings
-title: Lorem Ipsum - Web Developer
+title: averageuser42 blog
 description: "A blog about lorem ipsum ..."
 baseurl: "/space-jekyll-template" # for test: remove string '/space-jekyll-template' to ''
 url: "http://victorvoid.github.io/space-jekyll-template/" # for test: remove string 'http://victorvoid.github.io' to '' but in production: 'https://yourusername.github.io'
 
 # User settings
-username: lorem ipsum
-user_title: Lorem Ipsum - FrontEnd
-email: lorem.lorem@ipsum.com
+username: averageuser42
+user_title: averageuser42
+email: averageuser42@proton.me
 twitter_username: loremipsum
 github_username:  loremipsum
 discord_invite: cj5rg # Example: Discord server invite gg extension like in 'https://discord.gg/cj5rg'
