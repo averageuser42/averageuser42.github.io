@@ -1,7 +1,7 @@
 # Site settings
 title: averageuser42 blog
 description: "A blog about things"
-baseurl: " " # for test: remove string '/space-jekyll-template' to ''
+baseurl: '' # for test: remove string '/space-jekyll-template' to ''
 url: "https://averageuser42.github.io/" # for test: remove string 'http://victorvoid.github.io' to '' but in production: 'https://yourusername.github.io'
 
 # User settings
@@ -9,7 +9,7 @@ username: averageuser42
 user_title: averageuser42
 email: averageuser42@proton.me
 twitter_username: loremipsum
-github_username:  loremipsum
+github_username:  averageuser42
 discord_invite: cj5rg # Example: Discord server invite gg extension like in 'https://discord.gg/cj5rg'
 linkedin_public_url: loremipsum # Example: For public profile 'www.linkedin.com/in/john-smith', 'john-smith' is your linkedin_public_url
 disqus_username: loremipsum
