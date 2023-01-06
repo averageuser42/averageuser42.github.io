@@ -1,8 +1,8 @@
 # Site settings
 title: averageuser42 blog
-description: "A blog about lorem ipsum ..."
-baseurl: "/space-jekyll-template" # for test: remove string '/space-jekyll-template' to ''
-url: "http://victorvoid.github.io/space-jekyll-template/" # for test: remove string 'http://victorvoid.github.io' to '' but in production: 'https://yourusername.github.io'
+description: "A blog about things"
+baseurl: " " # for test: remove string '/space-jekyll-template' to ''
+url: "https://averageuser42.github.io/" # for test: remove string 'http://victorvoid.github.io' to '' but in production: 'https://yourusername.github.io'
 
 # User settings
 username: averageuser42
